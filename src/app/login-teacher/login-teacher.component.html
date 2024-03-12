@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous" />
+    <title>Login/Signup Page</title>
+</head>
+<body>
+    <div class="container">
+        <div id="loginForm" *ngIf="showLoginForm">
+            <div class="form-name">
+                <h2>Login Form</h2>
+            </div>
+            <input type="text" id="username" placeholder="username">
+            <input type="password" id="password" placeholder="Password">
+            <form [formGroup]="aFormGroup" class="captcha">
+                <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="recaptcha" ></ngx-recaptcha2>
+            </form>                
+            <button class="submit" type="button" (click)="login()">Login</button><br>
+            <div class="linkDiv">
+                <div class="link-content">
+                    <a href="#" class="link">Forgot Password?</a><br>
+                </div>
+                <div class="link-content">
+                    <a class="link" style="color: blue;" (click)="showPasswordPopup()">Don't have an account? Create Account</a>
+                </div>
+            </div>
+        </div>
+        <app-password-popup *ngIf="showPasswordPopupFlag" (passwordEntered)="checkPassword($event)"></app-password-popup>
+
+        <form id="signupForm" *ngIf="showSignupForm">
+            <h2>Sign Up Form</h2>
+            <input type="text" id="fullName" placeholder="Your Full Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="password" id="newPassword" placeholder="Enter a new password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+            <form [formGroup]="aFormGroup" class="captcha">
+                <ngx-recaptcha2 #captchaElem
+                  [siteKey]="siteKey"
+                  formControlName="recaptcha">
+                </ngx-recaptcha2>
+            </form>
+            <button type="button" class="submit" (click)="signup()">Sign Up</button><br/>
+            <div class="link-content">
+                <a  class="link" style="color: blue;" (click)="ShowLoginForm()">Already have an account? Log in</a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

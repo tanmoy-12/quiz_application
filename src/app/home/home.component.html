@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous" />
+</head>
+<body>
+    <div class="wrapper-main">
+        <div id="pc-view" class="d-flex justify-content-sm-between align-items-center p-2" style=" background: linear-gradient(to right, #FFCAD4 , #86B6F6 , #FFCAD4 );">
+            <div class="d-flex">
+                <a href="https://aot.edu.in/"><img src="assets/logo.png" height="50px"></a>
+                <div class="pt-2">
+                    <a href="https://aot.edu.in/" class="fs-4 fw-bold alert-heading"><p>ACADEMY OF TECHNOLOGY</p></a>
+                </div>
+                
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="margin-right: 20px;">
+                <a class="fs-5 fw-semibold alert-heading p-2" href=" " >Home</a> 
+                <a class="fs-5 fw-semibold alert-heading p-2" href="https://aot.edu.in/about-aot/">About</a>
+                <a class="fs-5 fw-semibold alert-heading p-2" href="https://aot.edu.in/contact-us/">Contact</a>
+                <a class="fs-5 fw-semibold alert-heading p-2" href="https://aot.edu.in/">Visit Us</a>
+                <a  href="login"><button id="button" type="button" class="btn btn-primary fw-bold">Login/SignUp</button></a>
+            </div>
+            
+        </div>
+        <div id="mobile-view" class="topnav">
+            <div class="nav-mobile">
+                <a href="https://aot.edu.in/" class="active"><img src="assets/logo.png" height="35px"></a>
+                <a href="https://aot.edu.in/" class="active"><h3>ACADEMY OF TECHNOLOGY</h3></a>
+                <div id="icon" (click)="MenuToggler()"><i class="fa-solid fa-bars"></i></div>
+            </div>
+            <div id="myLinks" *ngIf="isMenuOpened">
+                <a href=" ">Home</a>
+                <a href="https://aot.edu.in/about-aot/">About</a>
+                <a href="https://aot.edu.in/contact-us/">Contact</a>
+                <a href="https://aot.edu.in/">Visit Us</a>
+                <a href="login"><button type="button" class="login">Login/SignUp</button></a>
+            </div>
+            
+        </div>
+        <div class="container-1">
+            <div class="left-container-1">
+                <h1>Unleash your inner champion with<br>Quizzes</h1>
+                <p>
+                    Enhance your quiz-taking skills and knowledge with our comprehensive resources and expert guidance, 
+                    and become a true quiz master as you learn the strategies and tactics you need to succeed on any quiz 
+                    and reach your full quiz potential
+                </p>
+                <button type="button" class="btn btn-warning fw-bold fs-5"><a href="user-page" >Join a Quiz</a></button>
+            </div>
+            <div class="right-container-1">
+                <div class="image">
+                    <img src="https://pluspng.com/img-png/use-computer-png--800.png">
+                </div>
+            </div>
+        </div>
+        <div class="container-2">
+            <div class="left-container-2">
+                <div class="image-container-2">
+                    <img src="https://bettormedia.co.uk/wp-content/uploads/2019/09/About-Us-icon.png">
+                </div>
+            </div>
+            <div class="right-container-2">
+                <u><h1>About Us</h1></u>
+                <p>Welcome to our quiz website! We're a team of educators and developers who are passionate about helping people learn and grow. Our goal is to provide a fun and engaging platform for testing and improving knowledge on a variety of subjects.
+                    Our website offers a wide range of quizzes on a variety of topics, from science and history to pop culture and current events. We strive to provide high-quality content that is both informative and entertaining. We also place a strong emphasis on user 
+                    experience and strive to make our website as user-friendly and accessible as possible. We offer instant feedback on quiz performance, so you can track your progress and see where you need to improve.
+                    We hope you enjoy using our quiz website and find it a helpful resource for learning and self-improvement. Thank you for choosing us
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<footer>
+    <div class="gap"></div>
+    <div class="footer-content">
+        <p> Academy of Technology <i class="fa-regular fa-copyright"></i> 2024 | All Rights Reserved</p>
+    </div>
+    <div class="footer-link">
+        <a href="https://www.instagram.com/aotconnect/"><i class="fa-brands fa-instagram" style="color: #ba20bd;"></i></a>
+        <a href="https://www.linkedin.com/school/academy-of-technology/"><i class="fa-brands fa-linkedin" style="color: #5885ff;"></i></a>
+        <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA"><i class="fa-brands fa-youtube" style="color: #ff3737;"></i></a>
+    </div>
+</footer>
+</html>

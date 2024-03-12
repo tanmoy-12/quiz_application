@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous" />
+</head>
+<body>
+    <div class="nav-bar">
+        <img src="assets/logo.png" height="40px">
+        <h2>ACADEMY OF TECHNOLOGY</h2>
+    </div>
+    <div class="wrapper-main">
+        <div class="side-bar">
+            <button type="button" class="start">Start</button>
+            <a class="side-bar-content" href="#">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+            <a class="side-bar-content" href="#">
+                <i class="fa-solid fa-earth-americas"></i>
+                <p>Explore</p>
+            </a>
+            <a class="side-bar-content" href="#">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <p>My Library</p>
+            </a>
+            <a class="side-bar-content" href="#">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <p>Progress</p>
+            </a>
+            <a class="side-bar-content" href="#">
+                <i class="fa-solid fa-gear"></i>
+                <p>Settings</p>
+            </a>
+            <a class="side-bar-content" href="#">
+                <i class="fa-solid fa-chalkboard"></i>
+                <p>Learning</p>
+            </a>
+            <a class="side-bar-content" href="#">
+                <i class="fa-regular fa-file"></i>
+                <p>Collection</p>
+            </a>
+            <a class="side-bar-content" href="#">
+                <i class="fa-solid fa-circle-user"></i>
+                <p>Profile</p>
+            </a>
+            <a class="side-bar-content" href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <p>Log Out</p>
+            </a>
+        </div>
+        <div class="main">
+            <div class="main-content">
+                <h2>Hey Aotians! Let's explore, learn, and grow together!</h2>
+                <div class="search">
+                    <input type="text" placeholder="Search for Quiz on any topics" name="search" class="search-container">
+                    <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="heading">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2> &nbsp; &nbsp;&nbsp;Browse For More Quiz topics &nbsp;&nbsp;&nbsp;</h2>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="topic-container">
+                    <div class="topics">
+                        <div class="topic" id="technical" [class.active]="activeTab === 'technical'" (click)="setActiveTab('technical')">Technical</div>
+                        <div class="topic" id="non-technical" (click)="setActiveTab('non-technical')" >Non-Technical</div>
+                        <div class="topic" id="placement" (click)="setActiveTab('placement')">Placement</div>
+                        <div class="topic" id="1st" (click)="setActiveTab('1st')">First Year</div>
+                        <div class="topic" id="2nd" (click)="setActiveTab('2nd')">Second Year</div>
+                        <div class="topic" id="3rd" (click)="setActiveTab('3rd')">Third Year</div>
+                        <div class="topic" id="4th" (click)="setActiveTab('4th')">Fourth Year</div>
+                    </div>
+                    <div class="sub-topic" id="technical-content" [class.hidden]="activeTab !== 'technical'">
+                        <h2>Quiz for Practice purposes</h2>
+                        <div class="sub-topic-container">
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://th.bing.com/th/id/OIP.bkbn2-K7c9rMBV5dvYXDrQHaIh?rs=1&pid=ImgDetMain" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Quiz on C</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://i.pinimg.com/474x/be/1c/21/be1c2146053200a333a669856494f98c.jpg" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Quiz on C++</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://th.bing.com/th/id/OIP._Lm_T3scKhVEVFC54gcRxwHaE8?rs=1&pid=ImgDetMain" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Quiz on Java</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://th.bing.com/th/id/OIP.lZHtgsqo0gww25bLcpjTqQHaHZ?rs=1&pid=ImgDetMain" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Quiz on Python</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>   
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://th.bing.com/th/id/OIP.5jF7-4u68UQmnl7DwidKUQAAAA?w=346&h=346&rs=1&pid=ImgDetMain" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Web development</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>   
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sub-topic" id="non-technical-content" [class.hidden]="activeTab !== 'non-technical'">
+                        <h2>No Content Available</h2>
+                    </div>
+                    <div class="sub-topic" id="placement-content" [class.hidden]="activeTab !== 'placement'">
+                        <h2>Quiz for placement preparation</h2>
+                        <div class="sub-topic-container">
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://i.pinimg.com/474x/be/1c/21/be1c2146053200a333a669856494f98c.jpg" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Quiz on C++</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://th.bing.com/th/id/OIP._Lm_T3scKhVEVFC54gcRxwHaE8?rs=1&pid=ImgDetMain" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Quiz on Java</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://th.bing.com/th/id/OIP.lZHtgsqo0gww25bLcpjTqQHaHZ?rs=1&pid=ImgDetMain" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Quiz on Python</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>   
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://media.geeksforgeeks.org/wp-content/uploads/20200616200243/Object-Oriented-Programming-Concepts.jpg" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Oops Concepts</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>   
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://www.ibopacademy.com/wp-content/uploads/2019/01/Aptitude-test-768x193.jpg" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Quiz on Aptitude</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>   
+                            </a>
+                            <a href="">
+                                <div class="card">
+                                    <img class="upper-image" src="https://th.bing.com/th/id/OIP.5jF7-4u68UQmnl7DwidKUQAAAA?w=346&h=346&rs=1&pid=ImgDetMain" alt="Upper Image">
+                                    <div class="lower-part">
+                                        <h3>Web development</h3>
+                                        <h4>10 Questions</h4>
+                                    </div>
+                                </div>   
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sub-topic" id="1st-year-content" [class.hidden]="activeTab !== '1st'">
+                        <h2>No Content Available</h2>
+                    </div>
+                    <div class="sub-topic" id="2nd-year-content" [class.hidden]="activeTab !== '2nd'">
+                        <h2>No Content Available</h2>
+                    </div>
+                    <div class="sub-topic" id="3rd-year-content" [class.hidden]="activeTab !== '3rd'">
+                        <h2>No Content Available</h2>
+                    </div>
+                    <div class="sub-topic" id="4th-year-content" [class.hidden]="activeTab !== '4th'">
+                        <h2>No Content Available</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-bar">
+            <a class="navigation-bar-content" href="#">
+                <i class="fa-solid fa-earth-americas"></i>
+                <p>Explore</p>
+            </a>
+            <a class="navigation-bar-content" href="#">
+                <i class="fa-regular fa-folder"></i>
+                <p>My Library</p>
+            </a>
+            <a class="navigation-bar-content" href="#">
+                <i class="fa-solid fa-plus"></i>
+                <p>Create</p>
+            </a>
+            <a class="navigation-bar-content" href="#">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <p>Progress</p>
+            </a>
+            <a class="navigation-bar-content" href="#">
+                <i class="fa-solid fa-circle-user"></i>
+                <p>Profile</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

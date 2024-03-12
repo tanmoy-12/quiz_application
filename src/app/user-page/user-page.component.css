@@ -1,0 +1,368 @@
+body{
+    background-color: #f6eccf;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar {
+    background: linear-gradient(to right, #ED9ED6, #7071E8, #ED9ED6);
+    padding: 5px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed; /* Keep navbar fixed */
+    width: 100%; /* Occupy full width */
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.wrapper-main {
+    display: flex;
+    height: 100vh; /* Set wrapper height to full viewport height */
+}
+
+.side-bar {
+    background-color: #e9d0e2;
+    width: 180px;
+    padding: 0 4px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+}
+
+a{
+    text-decoration: none;
+}
+
+.side-bar-content{
+    display: flex;
+    align-items: center;
+    color: rgb(0, 20, 68);
+    font-size: larger;
+    font-weight: 500;
+    width: 100%;
+    margin: 18px 0;
+    padding-left: 12px;
+    
+}
+
+.fa-solid{
+    position: relative;
+    text-align: left;
+    left: 0;
+}
+
+.side-bar-content p{
+    margin: 0 20px;
+    text-align: left;
+}
+
+.start{
+    font-size: x-large;
+    font-weight: 700;
+    width: 160px;
+    height: 45px;
+    border: none;
+    background-color: #7F27FF;
+    color: aliceblue;
+    border-radius: 6px;
+    margin: 24px 8px;
+    box-shadow: 8px 8px 9px 0 rgba(56, 37, 69, 0.2);
+}
+
+.main {
+    background-color: #b4d4ff;
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding: 80px 0px;
+    width: calc(100% - 180px);
+    height: 100%; /* Fill available height */
+    margin-left: 180px; /* Adjust for the fixed side-bar */
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ffff;
+    border-radius: 10px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.search{
+    display: flex;
+    margin: 30px 0;
+}
+
+.search-container{
+    width: 600px;
+    height: 33px;
+    padding: 5px 10px;
+    font-size: large;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-button{
+    width: 45px;
+    border: none;
+    color: #0F2167;
+    font-size: x-large;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-container:focus{
+    border: none;
+    outline: none;
+}
+
+.heading{
+    display: flex;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic-container{
+    width: 70%;
+    background-color: #B7C9F2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 10px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.topics{
+    display: flex;
+    font-size: medium;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+.topic {
+    flex-grow: 1; /* Allow topics to grow and fill available space */
+    flex-basis: 0; /* Allow topics to evenly fill the container */
+    margin: 5px; /* Add some margin between topics */
+    background-color: #9AC1FF; /* Just for visualization */
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.sub-topic{
+    padding: 10px 25px;
+}
+
+.sub-topic h2{
+    text-align: center;
+    justify-self: center;
+}
+
+.sub-topic-container{
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px 25px 0;
+}
+
+.card img.upper-image {
+    width: 100%;
+    height: 170px; /* Set a fixed height for upper images */
+    object-fit: cover;
+}
+
+.card .lower-part {
+    padding: 10px 15px;
+    background-color: #e4c7dc;
+}
+
+.lower-part h3 {
+    padding: 0;
+    margin: 8px;
+}
+
+.lower-part h4 {
+    padding: 0;
+    margin: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.topic.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.topic.focus{
+    background-color: #007bff;
+    color: #fff;
+}
+
+.navigation-bar{
+    display: none;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .wrapper-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-bar{
+        display: none;
+    }
+
+    .search-container{
+        width: 500px;
+    }
+
+    .main{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sub-topic-container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-topic{
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .sub-topic h2{
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .navigation-bar{
+        display: flex;
+        flex-direction: row;
+        padding: 8px 20px;
+        background: linear-gradient(to right, #B7C9F2 , #9195F6, #B7C9F2);
+        justify-content: space-between;
+    }
+
+    .navigation-bar-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navigation-bar-content i{
+        font-size: x-large;
+        font-weight: 600;
+    }
+
+    .navigation-bar-content p{
+        font-size: medium;
+        font-weight: 500;
+        margin: 2px 0 0 0;
+        padding: 0;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 610px) {
+
+    .search-container{
+        width: 270px;
+    }
+
+
+    h2{
+        font-size: medium;
+        text-align: center;
+    }
+
+    .navigation-bar-content{
+        overflow-x: auto;
+    }
+
+    .navigation-bar-content i{
+        font-size: large;
+        font-weight: 600;
+    }
+
+    .navigation-bar-content p{
+        font-size: small;
+        font-weight: 500;
+        margin: 2px 0 0 0;
+        padding: 0;
+    }
+
+    .topic-container{
+        overflow-x: hidden;
+    }
+
+    .navigation-bar{
+        padding: 8px;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    
+    .search-container{
+        width: 200px;
+        font-size: small;
+    }
+
+    .sub-topic{
+        padding: 13px;
+        margin: 0 auto;
+        align-content: center;
+        text-align: center;
+    }
+
+    .sub-topic h1{
+        text-align: center;
+        align-self: center;
+    }
+}

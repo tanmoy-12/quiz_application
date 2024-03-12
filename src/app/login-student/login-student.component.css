@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Neon', sans-serif;
+    background: linear-gradient(to right, #518bef, #f991ef, #8ad2ff);
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+}
+
+#signupForm{
+    justify-content: center;
+    text-align: center;
+    margin: 50px auto;
+    width: 400px; 
+    background: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px);
+    color: rgb(0, 2, 36); 
+    border-radius: 8px;
+    padding: 30px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s; 
+    font-size: 24px; 
+    height: 700px;
+}
+
+
+input {
+    width: 80%;
+    padding: 8px; 
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: 15px; 
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #518bef;
+    color: rgb(0, 3, 82);
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #071936;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #f991ef;
+}
+
+.idname{
+    padding: 10px 0 16px 0;
+}
+
+.login-link {
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: blanchedalmond;
+}
+
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#loginForm{
+    background: rgba(255, 255, 255, 0.5); /* Blurred white background */
+    color: rgb(3, 4, 18);
+    border-radius: 8px;
+    margin:100px auto;
+    width: 400px;
+    height: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px; 
+}
+
+#loginForm h2{
+    margin: 20px;
+}
+
+.submit {
+    width: 70%;
+    padding: 10px; 
+    background-color: #eb5555;
+    color: white;
+    border: none;
+    margin: 10px;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 22px; 
+}
+
+.submit:hover {
+    background-color: #daa70e; 
+
+}
+
+.link{
+    text-decoration: none;
+    font-size: 19px;
+    color: rgb(0, 57, 66);
+    font-weight: 700;
+    margin-bottom: 0.9cap;
+}
+
+.linkDiv{
+    text-align: center;
+    margin: 12px auto;
+}
+
+.link-content{
+    margin: 15px;
+    cursor: pointer;
+}
+
+.captcha{
+    margin: 50px;
+    border-radius: 8px;
+    border: none;
+}
+
+.exit{
+    background-color: #8f5a5a;
+    width: 110px;
+    padding: 10px;
+    border: none;
+    color: #fcdbdb;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: large;
+}
+
+
+@media screen and (max-width: 310px) {
+    #loginForm {
+        width: 304px;
+        padding: 3px;
+    }
+
+    #signupForm{
+        width: 304px;
+    }
+
+    .link{
+        font-size: 12px;
+    }
+
+    .captcha{
+        margin:0;
+    }
+}
+
+
+@media screen and (max-width : 575px) {
+    #loginForm {
+        width: 330px;
+        padding: 3px;
+        margin: 50px auto;
+    }
+
+    #signupForm{
+        width: 330px;
+        padding: 5px;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .link{
+        font-size: 14px;
+    }
+
+    .captcha{
+        margin:15px auto;
+        padding: 0 12px;
+    }
+}
